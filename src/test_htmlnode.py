@@ -1,6 +1,6 @@
 import unittest
 
-from htmlnode import HTMLNode
+from htmlnode import HTMLNode, LeafNode
 
 
 class TestHTMLNode(unittest.TestCase):
@@ -29,6 +29,15 @@ class TestHTMLNode(unittest.TestCase):
         # print("boo")
         print(node)
 
+        node5 = LeafNode(test_tag, test_value, test_props)
+        node6 = LeafNode("p", "This is a paragraph of text.")
+        node7 = LeafNode("p", None)
+        node8 = LeafNode()
+
+        node5.to_html
+        node6.to_html
+        node7.to_html
+        node8.to_html
 
 
 if __name__ == "__main__":
